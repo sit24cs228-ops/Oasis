@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Money Heist | Ultimate Edition</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <h1>MONEY HEIST</h1>
+        <p>Bella Ciao • The Plan is Everything</p>
+    </header>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="#">The Plan</a>
+        <a href="#">The Crew</a>
+        <a href="#">Gallery</a>
+        <a href="#">Resistance</a>
+        <a href="#">Contact</a>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <h2>Join The Resistance</h2>
+
+        <p>
+            One Billion Euros. Eleven Days. No Rules.
+            Welcome to the greatest heist ever planned.
+        </p>
+
+        <button onclick="startHeist()">
+            Start The Heist
+        </button>
+
+    </section>
+
+    <!-- COUNTDOWN SECTION -->
+
+    <section class="countdown">
+
+        <h2>Next Heist Starts In</h2>
+
+        <div id="timer">
+            00 : 00 : 00
+        </div>
+
+    </section>
+
+    <!-- CHARACTER SECTION -->
+
+    <section class="features">
+
+        <div class="box">
+
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80"
+                alt="Professor">
+
+            <h3>The Professor</h3>
+
+            <p>
+                The mastermind behind the most ambitious heists in history.
+            </p>
+
+        </div>
+
+        <div class="box">
+
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80"
+                alt="Tokyo">
+
+            <h3>Tokyo</h3>
+
+            <p>
+                Fearless, emotional and the narrator of the revolution.
+            </p>
+
+        </div>
+
+        <div class="box">
+
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80"
+                alt="Berlin">
+
+            <h3>Berlin</h3>
+
+            <p>
+                Elegant, dangerous and born for chaos.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+
+    <section class="gallery">
+
+        <h2>Heist Gallery</h2>
+
+        <div class="gallery-images">
+
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80"
+                alt="Gallery Image">
+
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=700&q=80"
+                alt="Gallery Image">
+
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=700&q=80"
+                alt="Gallery Image">
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Money Heist © Netflix | Advanced Version
+        </p>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function startHeist() {
+
+            alert("Bella Ciao! The Heist Has Started 🔥");
+
+        }
+
+        // COUNTDOWN TIMER
+
+        let time = 3600;
+
+        const timer = document.getElementById("timer");
+
+        setInterval(() => {
+
+            let hours = Math.floor(time / 3600);
+
+            let minutes = Math.floor((time % 3600) / 60);
+
+            let seconds = time % 60;
+
+            timer.innerHTML =
+                String(hours).padStart(2, '0') + " : " +
+                String(minutes).padStart(2, '0') + " : " +
+                String(seconds).padStart(2, '0');
+
+            if (time > 0) {
+                time--;
+            }
+
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>
