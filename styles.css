@@ -1,0 +1,270 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+    background: #000;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+/* HEADINGS */
+
+h1,
+h2,
+h3,
+nav a,
+button {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+
+/* HEADER */
+
+header {
+    background: black;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 4px solid #e50914;
+}
+
+header h1 {
+    font-size: 90px;
+    color: #e50914;
+    text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+header p {
+    color: #bbb;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* NAVIGATION */
+
+nav {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e50914;
+}
+
+/* HERO SECTION */
+
+.hero {
+    height: 90vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.8)),
+        url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 70px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+
+    from {
+        text-shadow: 0 0 10px #e50914;
+    }
+
+    to {
+        text-shadow: 0 0 30px #ff0000;
+    }
+
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    max-width: 700px;
+    color: #ddd;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 15px 45px;
+    border: none;
+    background: #e50914;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(229, 9, 20, 0.5);
+}
+
+.hero button:hover {
+    transform: scale(1.1);
+    background: #b20710;
+}
+
+/* COUNTDOWN */
+
+.countdown {
+    background: #111;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.countdown h2 {
+    color: #e50914;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+#timer {
+    font-size: 50px;
+    color: white;
+}
+
+/* FEATURES */
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 70px 20px;
+    background: #0a0a0a;
+}
+
+.box {
+    width: 320px;
+    background: #181818;
+    border-left: 5px solid #e50914;
+    padding: 30px;
+    transition: 0.4s;
+    border-radius: 10px;
+}
+
+.box:hover {
+    transform: translateY(-12px);
+    background: #222;
+    box-shadow: 0 10px 20px rgba(229, 9, 20, 0.3);
+}
+
+.box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.box h3 {
+    color: #e50914;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.box p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* GALLERY */
+
+.gallery {
+    padding: 60px 20px;
+    text-align: center;
+    background: black;
+}
+
+.gallery h2 {
+    color: #e50914;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-images img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #222;
+    transition: 0.4s;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05);
+    border-color: #e50914;
+}
+
+/* FOOTER */
+
+footer {
+    background: #000;
+    padding: 30px;
+    text-align: center;
+    color: #666;
+    border-top: 1px solid #222;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px) {
+
+    header h1 {
+        font-size: 60px;
+    }
+
+    .hero h2 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #timer {
+        font-size: 35px;
+    }
+
+}
